@@ -12,6 +12,7 @@
     <title>注册页面</title>
     <style type="text/css">
         div{
+            
             width: 300px;
             height: 300px;
             margin: 0 auto;
