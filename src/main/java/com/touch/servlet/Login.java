@@ -1,14 +1,12 @@
 package com.touch.servlet;
 
-import com.touch.serviceuser.LoginService;
-import com.touch.serviceuser.Serviceimp;
+import com.touch.service.LoginService;
+import com.touch.service.Loginimp;
 
-import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 
 public class Login extends HttpServlet {
@@ -35,7 +33,7 @@ public class Login extends HttpServlet {
             }
         }
         else {
-            LoginService login=new Serviceimp();
+            LoginService login=new Loginimp();
             Boolean flag=login.getin(name,password);
             try{
             if (!flag){
@@ -44,7 +42,7 @@ public class Login extends HttpServlet {
             }
             else{
                 session.setAttribute("role",req.getParameter("name"));
-                LoginService service=new Serviceimp();
+                LoginService service=new Loginimp();
                 req.setAttribute("list",service.findall());
                 resp.sendRedirect("welcome.jsp");
 

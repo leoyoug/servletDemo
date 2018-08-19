@@ -1,7 +1,7 @@
 package com.touch.servlet;
 
-import com.touch.serviceuser.LoginService;
-import com.touch.serviceuser.Serviceimp;
+import com.touch.service.LoginService;
+import com.touch.service.Loginimp;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -13,7 +13,7 @@ import java.io.IOException;
 public class Welcome extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp){
         HttpSession session=req.getSession();
-        LoginService service=new Serviceimp();
+        LoginService service=new Loginimp();
         String s= (String) session.getAttribute("role");
         if(s!=null){
             req.setAttribute("list",service.findall());

@@ -1,4 +1,4 @@
-package com.touch;
+package com.test.cookie;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;

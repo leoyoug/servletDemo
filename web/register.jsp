@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: Administrator
@@ -19,16 +20,32 @@
     </style>
 </head>
 <body>
+    <%
+        String success= (String) request.getAttribute("success");
+        if(success!=null) {
+            if (success.equals("yes")) {
+                out.write("<script>alert('注册成功，返回登录页');</script>");
+                response.sendRedirect("login2.jsp");
+            }
+            if (success.equals("no")) {
+                out.write("<script>alert('系统异常请稍后再试');</script>");
+                response.sendRedirect("login2.jsp");
+            }
+        }
+
+    %>
     <div>
         <form action="${pageContext.request.contextPath}/register" method="post">
             <table>
                 <tr>
                     <td>用户名</td>
                     <td><input type="text" name="name"></td>
+                       <span>${map.name}</span>
                 </tr>
                 <tr>
                     <td>密码</td>
                     <td><input type="password" name="password"></td>
+                    <span>${map.password}</span>
                 </tr>
                 <tr>
                     <td>邮箱</td>
@@ -36,9 +53,11 @@
                 </tr>
                 <tr>
                     <td>生日</td>
-                    <td><input type="date" name="date"></td>
+                    <td><input type="date" name="birthday"></td>
                 </tr>
-                <tr><input type="submit" value="提交"></tr>
+                <tr>
+                    <td><input type="submit" value="提交"></td>
+                </tr>
             </table>
         </form>
     </div>

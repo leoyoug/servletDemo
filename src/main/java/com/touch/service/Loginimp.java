@@ -1,12 +1,12 @@
-package com.touch.serviceuser;
+package com.touch.service;
 
-import com.touch.dbutil.Dbuerimp;
+import com.touch.dbutil.Dbuserimp;
 import com.touch.dbutil.Dbuser;
 import com.touch.entity.Person;
 import java.util.List;
 import java.io.*;
-public class Serviceimp implements LoginService {
-    private Dbuser dbuser=new Dbuerimp();
+public class Loginimp implements LoginService {
+    private Dbuser dbuser=new Dbuserimp();
     public boolean reg(Person p) {
 
         return false;
@@ -22,7 +22,7 @@ public class Serviceimp implements LoginService {
 
 
 
-        return new Dbuerimp().islogin(name,password);
+        return new Dbuserimp().islogin(name,password);
     }
 
     public List<Person> findall() {

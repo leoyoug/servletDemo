@@ -9,6 +9,6 @@ public interface Dbuser {
     public List<Person> findallperson();
     public Person findperson(String name,String password);
     public boolean islogin(String name,String password);
-    public void inserperson(Person person);
+    public void inserperson(Person person) throws SQLException;
     public void updateperson(Person person);
 }

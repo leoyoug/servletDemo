@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Random;
 
-public class CodeD extends HttpServlet {
+public class Valid_Code extends HttpServlet {
     private int width=100;
     private int height=30;
     protected void doGet(HttpServletRequest req, HttpServletResponse resp){

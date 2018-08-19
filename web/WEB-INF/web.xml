@@ -4,11 +4,11 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
     <welcome-file-list>
-        <welcome-file>login2</welcome-file>
+        <welcome-file>login2.jsp</welcome-file>
     </welcome-file-list>
     <servlet>
         <servlet-name>ck</servlet-name>
-        <servlet-class>com.touch.Cklog</servlet-class>
+        <servlet-class>com.test.cookie.Cklog</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>ck</servlet-name>
@@ -16,7 +16,7 @@
     </servlet-mapping>
     <servlet>
         <servlet-name>code</servlet-name>
-        <servlet-class>com.touch.servlet.CodeD</servlet-class>
+        <servlet-class>com.touch.servlet.Valid_Code</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>code</servlet-name>
@@ -37,5 +37,13 @@
     <servlet-mapping>
         <servlet-name>welcome</servlet-name>
         <url-pattern>/welcome</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>register</servlet-name>
+        <servlet-class>com.touch.servlet.Register</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>register</servlet-name>
+        <url-pattern>/register</url-pattern>
     </servlet-mapping>
 </web-app>

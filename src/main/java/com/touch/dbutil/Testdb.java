@@ -1,6 +1,5 @@
 package com.touch.dbutil;
 
-import com.touch.Cklog;
 import com.touch.entity.Person;
 
 import java.sql.Connection;
@@ -13,8 +12,8 @@ public class Testdb {
         dotest4();
     }
     public static void dotest(){
-        Dbuerimp dbuerimp=new Dbuerimp();
-        List<Person>list= dbuerimp.findallperson();
+        Dbuserimp dbuserimp =new Dbuserimp();
+        List<Person>list= dbuserimp.findallperson();
         Iterator iterator=list.iterator();
         while (iterator.hasNext()){
             System.out.println(iterator.next());
@@ -25,13 +24,13 @@ public class Testdb {
       connection.close();
     }
     public static void dotest3(){
-        Dbuerimp imp=new Dbuerimp();
+        Dbuserimp imp=new Dbuserimp();
         Person p=imp.findperson("yang","123");
         System.out.println(p);
     }
     public static void dotest4(){
-        Dbuerimp dbuerimp=new Dbuerimp();
-        Boolean flag=dbuerimp.islogin("yang","1212131");
+        Dbuserimp dbuserimp =new Dbuserimp();
+        Boolean flag= dbuserimp.islogin("yang","1212131");
         System.out.println(flag);
     }
 }

@@ -1,4 +1,4 @@
-package com.touch.serviceuser;
+package com.touch.service;
 
 import com.touch.entity.Person;
 

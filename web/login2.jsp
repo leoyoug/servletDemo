@@ -14,6 +14,7 @@
 <body>
 <%
     String msg= (String) session.getAttribute("codewrong");
+
     session.removeAttribute("codewrong");
     if (msg!=null){
         out.write("<script>alert('错误的验证码');</script>");
@@ -47,7 +48,7 @@
 </form>
     <div>
         <span>还没有账号？</span>
-        <span><a href="${pageContext.request.contextPath}/register">注册</a></span>
+        <span><a href="${pageContext.request.contextPath}/register.jsp">注册</a></span>
     </div>
 </div>
 </body>
