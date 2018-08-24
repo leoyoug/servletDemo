@@ -46,4 +46,20 @@
         <servlet-name>register</servlet-name>
         <url-pattern>/register</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>booklist</servlet-name>
+        <servlet-class>com.touch.servlet.book.Booklist</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>booklist</servlet-name>
+        <url-pattern>/booklist</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>addbook</servlet-name>
+        <servlet-class>com.touch.servlet.book.AddBook</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>addbook</servlet-name>
+        <url-pattern>/bookstore/addbook</url-pattern>
+    </servlet-mapping>
 </web-app>

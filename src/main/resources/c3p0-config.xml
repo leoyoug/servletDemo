@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <c3p0-config>
     <default-config>
-        <property name="jdbcUrl">jdbc:mysql://localhost:3306/javaee</property>
+        <property name="jdbcUrl">jdbc:mysql://localhost:3308/javaee</property>
         <property name="driverClass">com.mysql.jdbc.Driver</property>
-        <property name="user">root</property>
+        <property name="user">work</property>
         <property name="password">123456</property>
 
 

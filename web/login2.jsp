@@ -25,6 +25,7 @@
         out.write("<script>alert('用户名密码输入错误');</script>");
     }
 %>
+<div id="header"></div>
 <div id="form">
 <form action="/touch/loginuser">
     <table >

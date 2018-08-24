@@ -40,5 +40,8 @@
         </c:forEach>
         </table>
     </div>
+    <div>
+        <a href="${pageContext.request.contextPath}/booklist">网上书城</a>
+    </div>
 </body>
 </html>
