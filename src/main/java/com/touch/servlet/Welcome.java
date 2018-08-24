@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 @WebServlet
+
 public class Welcome extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp){
         HttpSession session=req.getSession();
